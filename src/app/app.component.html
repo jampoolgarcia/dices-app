@@ -1,0 +1,18 @@
+<section class="container">
+  <div class="row my-4">
+    <div class="col-12 text-center">
+      <h2>Dado App</h2>
+      <button type="button" (click)="onRoll()" name="roll" class="btn btn-success btn-lg">roll dice</button>
+    </div>
+  </div>
+  <div class="row text-center d-flex justify-content-center">
+    <div class="col-4" *ngFor="let n of numbers">
+      <img [src]="'../assets/img/dice'+n+'.png'" class="shadow bg-success img-fluid border-rounded animate">
+    </div>
+  </div>
+  <div class="row mt-4" *ngIf="numbers[0] === numbers[1]">
+    <div class="alert alert-success text-center" role="alert">
+      You Win!
+    </div>
+  </div>
+</section>
